@@ -5,68 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JEYAMURUGAN ESEVA</title>
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      background: #f4f6f8;
-      color: #333;
-    }
-    header {
-      background: #0b5ed7;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-    header p {
-      margin: 5px 0 0;
-      font-size: 16px;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-    section {
-      background: white;
-      margin-bottom: 20px;
-      padding: 20px;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    section h2 {
-      color: #0b5ed7;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 8px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 6px;
-    }
-    .contact {
-      text-align: center;
-      font-size: 18px;
-    }
-    .contact a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background: #0b5ed7;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #e9ecef;
-      font-size: 14px;
-    }
+    body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #f4f6f8; color: #333; }
+    header { background: #0b5ed7; color: white; padding: 25px 15px; text-align: center; }
+    header h1 { margin: 0; font-size: 30px; letter-spacing: 1px; }
+    header p { margin: 8px 0 0; font-size: 16px; }
+    .container { max-width: 1000px; margin: auto; padding: 20px; }
+    section { background: white; margin-bottom: 20px; padding: 20px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    section h2 { color: #0b5ed7; border-bottom: 2px solid #eee; padding-bottom: 8px; font-size: 22px; }
+    section h2 span { display: block; font-size: 18px; color: #444; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    .hours { font-size: 16px; line-height: 1.8; }
+    .contact { text-align: center; font-size: 18px; }
+    .contact a { display: inline-block; margin: 10px; padding: 12px 22px; background: #0b5ed7; color: white; text-decoration: none; border-radius: 4px; }
+    iframe { width: 100%; height: 300px; border: none; border-radius: 6px; }
+    footer { text-align: center; padding: 15px; background: #e9ecef; font-size: 14px; }
+    button { padding: 12px 25px; background: #0b5ed7; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; }
+    input, textarea { font-size: 14px; }
   </style>
 </head>
 <body>
@@ -79,123 +34,53 @@
 <div class="container">
 
   <section>
-    <h2>About Us | எங்களை பற்றி</h2>
+    <h2>About Us <span>எங்களை பற்றி</span></h2>
     <p><strong>Owner:</strong> Meena</p>
     <p>JEYAMURUGAN ESEVA provides fast, reliable and affordable government and digital services under one roof.</p>
     <p>JEYAMURUGAN ESEVA என்பது அனைத்து அரசு மற்றும் டிஜிட்டல் சேவைகளையும் ஒரே இடத்தில் நம்பகமாக வழங்கும் E-Seva மையமாகும்.</p>
   </section>
 
   <section>
-    <h2>🖨️ Print & Xerox Services</h2>
-    <ul>
-      <li>Xerox / Color Xerox</li>
-      <li>Printout</li>
-      <li>Lamination</li>
-      <li>Spiral Binding</li>
-      <li>Staple Binding</li>
-    </ul>
+    <h2>🕒 Working Hours <span>வேலை நேரம்</span></h2>
+    <div class="hours">
+      Monday – Saturday : <strong>9:00 AM – 8:00 PM</strong><br>
+      Sunday : <strong>9:00 AM – 2:00 PM</strong>
+    </div>
   </section>
 
   <section>
-    <h2>💡 Bill & Payment Services</h2>
-    <ul>
-      <li>LIC Premium Payment</li>
-      <li>EB Electricity Bill</li>
-      <li>Property Tax</li>
-      <li>Drinking Water Tax</li>
-      <li>All E-Payment Services</li>
-    </ul>
+    <h2>📍 Our Location <span>எங்களை காண</span></h2>
+    <iframe src="https://www.google.com/maps?q=Collectorate%20Bus%20Stand&output=embed"></iframe>
   </section>
 
   <section>
-    <h2>🪪 Identity Document Services</h2>
-    <ul>
-      <li>Aadhaar Address Change</li>
-      <li>Ration Card – New / Correction</li>
-      <li>PAN Card – New / Correction</li>
-      <li>Voter ID – New / Correction</li>
-    </ul>
-  </section>
+    <h2>📝 Select Your Service <span>உங்கள் சேவையை தேர்வு செய்யவும்</span></h2>
+    <form id="serviceForm">
 
-  <section>
-    <h2>📄 Certificate Services</h2>
-    <ul>
-      <li>Income Certificate</li>
-      <li>Community Certificate</li>
-      <li>OBC Certificate</li>
-      <li>Other Government Certificates</li>
-    </ul>
-  </section>
+      <label><strong>Name / பெயர்:</strong></label><br>
+      <input type="text" id="custName" required style="width:100%; padding:8px; margin-bottom:10px;">
 
-  <section>
-    <h2>🚗 Transport Services</h2>
-    <ul>
-      <li>Driving Licence</li>
-      <li>LLR – New / Correction</li>
-      <li>RC Services</li>
-    </ul>
-  </section>
+      <label><strong>Mobile Number / கைபேசி எண்:</strong></label><br>
+      <input type="tel" id="custMobile" required style="width:100%; padding:8px; margin-bottom:15px;">
 
-  <section>
-    <h2>🏛️ Registration Department Services</h2>
-    <ul>
-      <li>Patta / Chitta / Adangal</li>
-      <li>Document Copy</li>
-      <li>Patta Name Transfer</li>
-      <li>E-Payment</li>
-      <li>Marriage Registration</li>
-    </ul>
-  </section>
+      <strong>Select Services:</strong><br>
+      <label><input type="checkbox" value="Print / Xerox Services"> Print / Xerox Services</label><br>
+      <label><input type="checkbox" value="Bill & Payment Services"> Bill & Payment Services</label><br>
+      <label><input type="checkbox" value="Aadhaar / PAN / Voter ID Services"> Aadhaar / PAN / Voter ID Services</label><br>
+      <label><input type="checkbox" value="Certificate Services"> Certificate Services</label><br>
+      <label><input type="checkbox" value="Driving Licence / RC Services"> Driving Licence / RC Services</label><br>
+      <label><input type="checkbox" value="Patta / Registration Services"> Patta / Registration Services</label><br>
+      <label><input type="checkbox" value="Passport Services"> Passport Services</label><br>
+      <label><input type="checkbox" value="Pension Services"> Pension Services</label><br>
+      <label><input type="checkbox" id="otherServiceCheck" value="Other Services"> Others (Other Services)</label><br>
+      <textarea id="otherNote" placeholder="Please type other service details here..." style="width:100%; padding:8px; margin-top:8px; display:none;"></textarea><br><br>
 
-  <section>
-    <h2>🚆 Booking Services</h2>
-    <ul>
-      <li>Railway Ticket Booking</li>
-      <li>Bus Ticket Booking</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>📚 Government Exams</h2>
-    <ul>
-      <li>TNPSC</li>
-      <li>SSC</li>
-      <li>Railway</li>
-      <li>TRB</li>
-      <li>JEE</li>
-      <li>Other Competitive Exams</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>👷 PF & Welfare Board Services</h2>
-    <ul>
-      <li>PF Services</li>
-      <li>Welfare Board – New Registration</li>
-      <li>Renewal</li>
-      <li>Financial Assistance</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>🌍 Passport Services</h2>
-    <ul>
-      <li>New Passport</li>
-      <li>Correction</li>
-      <li>Renewal</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>👴 Pension Services</h2>
-    <ul>
-      <li>Pension Application</li>
-      <li>Life Certificate Registration</li>
-    </ul>
+      <button type="submit">Send via WhatsApp</button>
+    </form>
   </section>
 
   <section class="contact">
-    <h2>Contact Us | தொடர்புக்கு</h2>
+    <h2>Contact Us <span>தொடர்புக்கு</span></h2>
     <p><strong>Address:</strong><br>
       JEYAMURUGAN ESEVA<br>
       Veerakumar Complex<br>
@@ -203,7 +88,7 @@
     </p>
     <p><strong>Phone / WhatsApp:</strong> 7708767659</p>
     <a href="tel:7708767659">📞 Call Now</a>
-    <a href="https://wa.me/917708767659" target="_blank">💬 WhatsApp</a>
+    <a href="https://wa.me/917708767659" target="_blank">💬 WhatsApp Enquiry</a>
   </section>
 
 </div>
@@ -211,6 +96,67 @@
 <footer>
   © 2026 JEYAMURUGAN ESEVA. All Rights Reserved.
 </footer>
+
+<script>
+// Ensure script runs after DOM is ready
+(function () {
+  const form = document.getElementById('serviceForm');
+  const otherCheck = document.getElementById('otherServiceCheck');
+  const otherNote = document.getElementById('otherNote');
+
+  otherCheck.addEventListener('change', function () {
+    otherNote.style.display = this.checked ? 'block' : 'none';
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    sendWhatsApp();
+  });
+})();
+
+function sendWhatsApp() {
+  const name = document.getElementById('custName').value.trim();
+  const mobile = document.getElementById('custMobile').value.trim();
+  const checked = document.querySelectorAll('input[type=checkbox]:checked');
+  const otherChecked = document.getElementById('otherServiceCheck').checked;
+  const otherNote = document.getElementById('otherNote').value.trim();
+
+  if (!name || !mobile) {
+    alert('Please enter name and mobile number');
+    return;
+  }
+
+  if (checked.length === 0) {
+    alert('Please select at least one service');
+    return;
+  }
+
+  if (otherChecked && otherNote === '') {
+    alert('Please type details for Other service');
+    return;
+  }
+
+  const services = [];
+  checked.forEach(c => {
+    if (c.id !== 'otherServiceCheck') services.push(c.value);
+  });
+
+  if (otherChecked) {
+    services.push('Other: ' + otherNote);
+  }
+
+  const textMessage =
+    'Customer Details:\n' +
+    'Name: ' + name + '\n' +
+    'Mobile: ' + mobile + '\n\n' +
+    'Required Services:\n- ' + services.join('\n- ');
+
+  const encodedMessage = encodeURIComponent(textMessage);
+  const whatsappURL = 'https://api.whatsapp.com/send?phone=917708767659&text=' + encodedMessage;
+
+  window.location.href = whatsappURL;
+}
+</script>
 
 </body>
 </html>
